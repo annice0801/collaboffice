@@ -6,8 +6,10 @@ import type { z } from "zod";
 // 所有 Agent 呼叫 Claude 都經過這個檔案。
 // 要換模型、調整共用設定，只改這裡。
 
-// new Anthropic() 會自動讀取環境變數 ANTHROPIC_API_KEY
-const client = new Anthropic();
+// new Anthropic() 會自動讀取環境變數 ANTHROPIC_API_KEY。
+// 第一次呼叫 AI 時才建立：沒設定金鑰時網站照常運作，只有用到 AI 的功能會出錯
+let anthropic: Anthropic | undefined;
+const client = () => (anthropic ??= new Anthropic());
 
 // 角色 → 模型 的對照表（你決定的分配）：
 //   主管（秘書、總經理、部門經理）負責判斷、拆解、審查 → Sonnet 5.5
@@ -89,7 +91,7 @@ export async function askText(options: {
 
   // 搜尋比較久時 API 會先暫停（pause_turn），把目前的內容原封不動送回去就會接著做（最多接續 5 次）
   for (let round = 0; round < 6; round++) {
-    const response = await client.beta.messages.create({
+    const response = await client().beta.messages.create({
       model: options.model,
       max_tokens: options.maxTokens ?? 16000,
       system: options.system,
@@ -146,7 +148,7 @@ export async function askStructured<Schema extends z.ZodType>(options: {
   effort?: Effort;
   maxTokens?: number;
 }): Promise<{ data: z.infer<Schema>; usage: AiUsage }> {
-  const response = await client.beta.messages.parse({
+  const response = await client().beta.messages.parse({
     model: options.model,
     max_tokens: options.maxTokens ?? 16000,
     system: options.system,

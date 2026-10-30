@@ -1,26 +1,299 @@
 @import "tailwindcss";
 
+/*
+  CollabOffice 設計規範（Design Tokens）
+  所有頁面的顏色都從這裡取，改一個地方就能整站換色。
+  風格：溫暖的紙張底色 + 墨色文字 + 深松綠強調色，營造「沉穩、可信賴的辦公室」感。
+*/
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --paper: #f5f2ec; /*      頁面底色（米白紙張） */
+  --surface: #ffffff; /*    卡片底色 */
+  --ink: #16150f; /*        主要文字（墨色） */
+  --muted: #6b675e; /*      次要文字 */
+  --line: #e3ded4; /*       分隔線、邊框 */
+  --accent: #2f5d50; /*     強調色（深松綠） */
+  --accent-ink: #ffffff; /* 強調色上的文字 */
+  --accent-soft: #e3ece7; /* 淡強調色底 */
+  --gold: #b8893b; /*       點綴色（金） */
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
+/* 深色模式：跟著系統設定自動切換 */
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --paper: #12110e;
+    --surface: #1b1a16;
+    --ink: #f1eee6;
+    --muted: #a29d92;
+    --line: #2e2c26;
+    --accent: #8fc3ae;
+    --accent-ink: #12110e;
+    --accent-soft: #1f2e28;
+    --gold: #d9ae5f;
   }
 }
 
+/* 把上面的顏色註冊給 Tailwind，就能寫 bg-paper、text-ink、border-line 這類 class */
+@theme inline {
+  --color-paper: var(--paper);
+  --color-surface: var(--surface);
+  --color-ink: var(--ink);
+  --color-muted: var(--muted);
+  --color-line: var(--line);
+  --color-accent: var(--accent);
+  --color-accent-ink: var(--accent-ink);
+  --color-accent-soft: var(--accent-soft);
+  --color-gold: var(--gold);
+
+  /* 英數用 Geist，中文交給系統字型（蘋方、微軟正黑體） */
+  --font-sans: var(--font-geist-sans), "PingFang TC", "Microsoft JhengHei", sans-serif;
+  --font-mono: var(--font-geist-mono);
+  /* 標題用的襯線字（思源宋體），營造質感 */
+  --font-serif: var(--font-noto-serif-tc), "Songti TC", "PMingLiU", serif;
+}
+
+html {
+  /* 點選頁內連結（例如 #features）時平滑捲動 */
+  scroll-behavior: smooth;
+}
+
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-geist-sans), "PingFang TC", "Microsoft JhengHei", sans-serif;
+}
+
+/* 鍵盤操作時看得到目前選到哪個元素 */
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+  border-radius: 6px;
+}
+
+/* 進場動畫：區塊由下往上淡入 */
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+.animate-rise {
+  animation: rise 0.8s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+}
+
+/* 示意畫面裡的進度條：緩慢填滿 */
+@keyframes fill {
+  from {
+    width: 0;
+  }
+}
+.animate-fill {
+  animation: fill 1.6s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+}
+
+/* 使用者在系統設定「減少動態效果」時，關掉所有動畫 */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .animate-rise,
+  .animate-fill {
+    animation: none;
+  }
+}
+
+/* ── 立體辦公室的人物動畫 ── */
+/* 走路：兩條腿交替上下 */
+@keyframes step {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-3px);
+  }
+}
+.leg-a {
+  animation: step 0.4s steps(2) infinite;
+}
+.leg-b {
+  animation: step 0.4s steps(2) infinite 0.2s;
+}
+/* 打字：上半身輕微晃動 */
+/* 被點醒的人嚇一跳：往上彈一下 */
+@keyframes startle-jump {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  30% {
+    transform: translateY(-10px);
+  }
+  60% {
+    transform: translateY(2px);
+  }
+}
+.startle-jump {
+  animation: startle-jump 0.45s ease-out;
+}
+
+/* 換主題的轉場：鏡頭微拉遠再回來，同時白光一閃（0.8 秒） */
+@keyframes theme-zoom {
+  0% {
+    transform: scale(0.94);
+    opacity: 0.4;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+.theme-zoom {
+  transform-box: view-box;
+  transform-origin: center;
+  animation: theme-zoom 0.8s ease-out both;
+}
+@keyframes theme-flash {
+  0% {
+    opacity: 0.95;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+.theme-flash {
+  background: radial-gradient(circle at 50% 45%, #ffffff 0%, rgba(255, 255, 255, 0.85) 35%, rgba(255, 255, 255, 0) 75%);
+  animation: theme-flash 0.8s ease-out forwards;
+}
+
+/* 俄羅斯方塊消除多行時的鼓勵字：彈出後往上飄走 */
+@keyframes cheer {
+  0% {
+    opacity: 0;
+    transform: scale(0.6);
+  }
+  20% {
+    opacity: 1;
+    transform: scale(1.1);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+}
+.cheer {
+  animation: cheer 1.2s ease-out forwards;
+}
+
+/* 遊戲機台上方的小招牌：輕輕上下跳 */
+@keyframes arcade-bob {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-3px);
+  }
+}
+.arcade-bob {
+  animation: arcade-bob 1.6s ease-in-out infinite;
+}
+
+@keyframes typing {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(1px);
+  }
+}
+.typing {
+  animation: typing 0.5s steps(2) infinite;
+}
+/* 睡覺：Z 往上飄並淡出 */
+@keyframes zzz {
+  0% {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  30% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+}
+.zzz {
+  animation: zzz 2.4s ease-in-out infinite;
+}
+.zzz-2 {
+  animation-delay: 0.6s;
+}
+.zzz-3 {
+  animation-delay: 1.2s;
+}
+/* 對話氣泡：彈出 */
+@keyframes pop {
+  from {
+    opacity: 0;
+    transform: scale(0.85);
+  }
+}
+.bubble-pop {
+  animation: pop 0.25s ease-out both;
+  transform-box: fill-box;
+  transform-origin: bottom center;
+}
+@media (prefers-reduced-motion: reduce) {
+  .leg-a,
+  .leg-b,
+  .typing,
+  .arcade-bob,
+  .theme-zoom,
+  .startle-jump,
+  .theme-flash,
+  .cheer,
+  .zzz,
+  .bubble-pop {
+    animation: none;
+  }
+}
+
+/* ── 寶可夢風格對話框 ── */
+/* 白底、粗深色外框、內側再一圈細線（像 Game Boy 遊戲的對話框） */
+.retro-box {
+  background: #f8f8f0;
+  color: #202020;
+  border: 4px solid #303030;
+  border-radius: 6px;
+  box-shadow:
+    inset 0 0 0 2px #f8f8f0,
+    inset 0 0 0 4px #5878a8,
+    0 6px 0 rgb(0 0 0 / 0.25);
+  font-family: var(--font-pixel), "PingFang TC", monospace;
+  letter-spacing: 0.04em;
+  image-rendering: pixelated;
+}
+/* 文字打完時，右下角閃爍的 ▼ */
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+.retro-blink {
+  animation: blink 0.8s steps(1) infinite;
+}
+@media (prefers-reduced-motion: reduce) {
+  .retro-blink {
+    animation: none;
+  }
+}
+/* 對話框裡的輸入框不顯示全站的焦點外框（對話框本身已經有明顯的游標 ▶） */
+.retro-box :focus-visible {
+  outline: none;
 }

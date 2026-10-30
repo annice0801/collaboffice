@@ -1,0 +1,125 @@
+{
+ "id": "classic",
+ "renderer": "svg",
+ "outfit": "classic",
+ "palette": {
+  "background": "#cfd8c4",
+  "corridor": "#d9d6e6",
+  "wall": "#f4f1ea",
+  "wallLine": "#cfc8ba",
+  "wallTop": "#b9b1a2",
+  "window": "#bfe0f2",
+  "plate": "#16150f",
+  "plateText": "#f5f2ec",
+  "desk": "#ede7dc",
+  "bossDesk": "#a4774f",
+  "chairs": [
+   "#3e5c9a"
+  ],
+  "sofas": [
+   "#3e5c9a",
+   "#6b4a2e"
+  ],
+  "grass": [
+   "#a9cf8f",
+   "#9cc483"
+  ],
+  "path": "#e6dcc7",
+  "departments": [
+   {
+    "floor": [
+     "#dfe7f1",
+     "#d5dfec"
+    ],
+    "shirt": "#4a6fa5"
+   },
+   {
+    "floor": [
+     "#f3e1e4",
+     "#ecd5d9"
+    ],
+    "shirt": "#c0566b"
+   },
+   {
+    "floor": [
+     "#dfeee4",
+     "#d3e6d9"
+    ],
+    "shirt": "#3f8a5c"
+   },
+   {
+    "floor": [
+     "#f4ead8",
+     "#ede0c8"
+    ],
+    "shirt": "#c08a2e"
+   },
+   {
+    "floor": [
+     "#e7e2f3",
+     "#ddd6ee"
+    ],
+    "shirt": "#6d58b0"
+   },
+   {
+    "floor": [
+     "#e2eeef",
+     "#d6e6e8"
+    ],
+    "shirt": "#2f8a91"
+   },
+   {
+    "floor": [
+     "#f1e6dc",
+     "#e9dacd"
+    ],
+    "shirt": "#a0603a"
+   },
+   {
+    "floor": [
+     "#ececec",
+     "#e2e2e2"
+    ],
+    "shirt": "#555b66"
+   }
+  ],
+  "rooms": {
+   "boss": [
+    "#6b4a2e",
+    "#5e4027"
+   ],
+   "assistant": [
+    "#ece6da",
+    "#e4ddcf"
+   ],
+   "gm": [
+    "#e9e1d3",
+    "#e0d6c5"
+   ],
+   "break": [
+    "#e6efe9",
+    "#dce8e0"
+   ],
+   "library": [
+    "#efe4d2",
+    "#e6d8c1"
+   ],
+   "game": [
+    "#e3e6f2",
+    "#d8dcec"
+   ],
+   "playground": [
+    "#f6efd9",
+    "#efe5c8"
+   ],
+   "wellness": [
+    "#e3efe8",
+    "#d7e8de"
+   ],
+   "meeting": [
+    "#e8e6ef",
+    "#dfdce9"
+   ]
+  }
+ }
+}

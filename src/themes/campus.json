@@ -1,0 +1,130 @@
+{
+ "id": "campus",
+ "renderer": "svg",
+ "outfit": "campus",
+ "palette": {
+  "background": "#cdeaf7",
+  "corridor": "#f1f3f4",
+  "wall": "#ffffff",
+  "wallLine": "#dadce0",
+  "wallTop": "#bdc1c6",
+  "window": "#aee1fb",
+  "plate": "#4285f4",
+  "plateText": "#ffffff",
+  "desk": "#ffffff",
+  "bossDesk": "#fbbc05",
+  "chairs": [
+   "#4285f4",
+   "#ea4335",
+   "#fbbc05",
+   "#34a853"
+  ],
+  "sofas": [
+   "#ea4335",
+   "#4285f4",
+   "#34a853",
+   "#fbbc05"
+  ],
+  "grass": [
+   "#86cf74",
+   "#79c566"
+  ],
+  "path": "#f6e7c1",
+  "departments": [
+   {
+    "floor": [
+     "#e8f0fe",
+     "#d2e3fc"
+    ],
+    "shirt": "#4285f4"
+   },
+   {
+    "floor": [
+     "#fce8e6",
+     "#fad2cf"
+    ],
+    "shirt": "#ea4335"
+   },
+   {
+    "floor": [
+     "#fef7e0",
+     "#feefc3"
+    ],
+    "shirt": "#f9ab00"
+   },
+   {
+    "floor": [
+     "#e6f4ea",
+     "#ceead6"
+    ],
+    "shirt": "#34a853"
+   },
+   {
+    "floor": [
+     "#f3e8fd",
+     "#e9d2fd"
+    ],
+    "shirt": "#a142f4"
+   },
+   {
+    "floor": [
+     "#e4f7fb",
+     "#cbf0f8"
+    ],
+    "shirt": "#12b5cb"
+   },
+   {
+    "floor": [
+     "#feefe3",
+     "#fedfc8"
+    ],
+    "shirt": "#fa7b17"
+   },
+   {
+    "floor": [
+     "#f1f3f4",
+     "#e8eaed"
+    ],
+    "shirt": "#5f6368"
+   }
+  ],
+  "rooms": {
+   "boss": [
+    "#3c4043",
+    "#33373a"
+   ],
+   "assistant": [
+    "#e6f4ea",
+    "#ceead6"
+   ],
+   "gm": [
+    "#fef7e0",
+    "#feefc3"
+   ],
+   "break": [
+    "#fce8e6",
+    "#fad2cf"
+   ],
+   "library": [
+    "#fff3e0",
+    "#ffe0b2"
+   ],
+   "game": [
+    "#e8f0fe",
+    "#d2e3fc"
+   ],
+   "playground": [
+    "#fff8e1",
+    "#ffefc0"
+   ],
+   "wellness": [
+    "#e6f4ea",
+    "#d4ecdc"
+   ],
+   "meeting": [
+    "#f1f3f4",
+    "#e8eaed"
+   ]
+  }
+ }
+}

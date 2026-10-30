@@ -1,0 +1,1271 @@
+{
+ "id": "magic",
+ "renderer": "sprite",
+ "outfit": "magic",
+ "sprites": "/themes/magic/",
+ "floor": "stone",
+ "walls": {
+  "style": "brick",
+  "stripe": "#e9c46a",
+  "window": "arched"
+ },
+ "houses": [
+  "red",
+  "green",
+  "yellow",
+  "blue",
+  "white",
+  "brown"
+ ],
+ "palette": {
+  "background": "#1d2140",
+  "corridor": "#9a9387",
+  "wall": "#b3a58f",
+  "wallLine": "#7d6f5c",
+  "wallTop": "#5a4a3a",
+  "window": "#f4d58d",
+  "plate": "#3b2416",
+  "plateText": "#e9c46a",
+  "desk": "#8a5a3b",
+  "bossDesk": "#6b3f22",
+  "chairs": [
+   "#6b3f22"
+  ],
+  "sofas": [
+   "#8e2b2b",
+   "#2f4a6b"
+  ],
+  "grass": [
+   "#5f8f47",
+   "#557f3f"
+  ],
+  "path": "#c8b89a",
+  "departments": [
+   {
+    "floor": [
+     "#a39a8b",
+     "#998f80"
+    ],
+    "shirt": "#9c1c22"
+   },
+   {
+    "floor": [
+     "#a39a8b",
+     "#998f80"
+    ],
+    "shirt": "#1f6b3a"
+   },
+   {
+    "floor": [
+     "#a39a8b",
+     "#998f80"
+    ],
+    "shirt": "#d9a521"
+   },
+   {
+    "floor": [
+     "#a39a8b",
+     "#998f80"
+    ],
+    "shirt": "#1f4e8c"
+   },
+   {
+    "floor": [
+     "#a39a8b",
+     "#998f80"
+    ],
+    "shirt": "#b8b8b8"
+   },
+   {
+    "floor": [
+     "#a39a8b",
+     "#998f80"
+    ],
+    "shirt": "#7a4a2a"
+   },
+   {
+    "floor": [
+     "#a39a8b",
+     "#998f80"
+    ],
+    "shirt": "#6a3d9a"
+   },
+   {
+    "floor": [
+     "#a39a8b",
+     "#998f80"
+    ],
+    "shirt": "#2f7f86"
+   }
+  ],
+  "rooms": {
+   "boss": [
+    "#7a2e2e",
+    "#6e2828"
+   ],
+   "assistant": [
+    "#8a6a4a",
+    "#7e6043"
+   ],
+   "gm": [
+    "#8a6a4a",
+    "#7e6043"
+   ],
+   "break": [
+    "#7a2e2e",
+    "#6e2828"
+   ],
+   "library": [
+    "#7a5534",
+    "#6e4b2d"
+   ],
+   "game": [
+    "#a39a8b",
+    "#998f80"
+   ],
+   "playground": [
+    "#6a9a4f",
+    "#5f8f47"
+   ],
+   "wellness": [
+    "#c9c2b4",
+    "#bfb8a9"
+   ],
+   "meeting": [
+    "#a39a8b",
+    "#998f80"
+   ]
+  }
+ },
+ "roomNames": {
+  "boss": "校長室",
+  "assistant": "書記官室",
+  "gm": "副校長室",
+  "break": "學院交誼廳",
+  "library": "禁書區圖書館",
+  "game": "決鬥社",
+  "playground": "飛天掃帚練習場",
+  "wellness": "醫護翼",
+  "meeting": "大禮堂",
+  "courtyard": "學院中庭"
+ },
+ "seats": {
+  "layout": "longTable",
+  "longTable": {
+   "row": [
+    {
+     "s": "long-table@90",
+     "at": [
+      2.4,
+      1.15
+     ]
+    },
+    {
+     "s": "long-table@90",
+     "at": [
+      5.4,
+      1.15
+     ]
+    }
+   ],
+   "seat": [
+    {
+     "s": "chair@0",
+     "at": [
+      0,
+      -0.2
+     ],
+     "solid": false,
+     "bias": -0.05
+    }
+   ]
+  },
+  "single": [
+   {
+    "s": "table-medium@0",
+    "at": [
+     0,
+     1.1
+    ]
+   },
+   {
+    "s": "candle@0",
+    "at": [
+     0.4,
+     1.0
+    ],
+    "z": 30,
+    "solid": false,
+    "bias": 0.3
+   },
+   {
+    "s": "chair@0",
+    "at": [
+     0,
+     -0.2
+    ],
+    "solid": false,
+    "bias": -0.05
+   }
+  ],
+  "boss": [
+   {
+    "s": "table@0",
+    "at": [
+     -0.4,
+     1.15
+    ]
+   },
+   {
+    "s": "table-medium@0",
+    "at": [
+     1.1,
+     1.15
+    ]
+   },
+   {
+    "s": "chair@0",
+    "at": [
+     0,
+     -0.2
+    ],
+    "solid": false,
+    "bias": -0.05
+   }
+  ],
+  "desk": [
+   {
+    "s": "table-medium@0",
+    "at": [
+     0,
+     1.1
+    ]
+   },
+   {
+    "s": "chair@0",
+    "at": [
+     0,
+     -0.2
+    ],
+    "solid": false,
+    "bias": -0.05
+   }
+  ]
+ },
+ "rooms": {
+  "boss": [
+   {
+    "s": "bookcase@90",
+    "at": [
+     0.7,
+     1.6
+    ]
+   },
+   {
+    "s": "bookcase@90",
+    "at": [
+     0.7,
+     3.8
+    ]
+   },
+   {
+    "s": "chest@0",
+    "at": [
+     7.0,
+     1.0
+    ]
+   },
+   {
+    "s": "rug@0",
+    "at": [
+     3.6,
+     5.4
+    ],
+    "flat": true
+   },
+   {
+    "s": "sofa@0",
+    "at": [
+     2.6,
+     5.4
+    ]
+   },
+   {
+    "s": "pillar@0",
+    "at": [
+     0.9,
+     7.1
+    ]
+   },
+   {
+    "s": "pillar@0",
+    "at": [
+     7.1,
+     7.1
+    ]
+   },
+   {
+    "s": "banner-red@0",
+    "at": [
+     1.3,
+     0.3
+    ],
+    "z": 8,
+    "solid": false
+   },
+   {
+    "s": "banner-yellow@0",
+    "at": [
+     6.7,
+     0.3
+    ],
+    "z": 8,
+    "solid": false
+   },
+   {
+    "s": "torch@0",
+    "at": [
+     0.2,
+     4.7
+    ],
+    "z": 40,
+    "solid": false
+   }
+  ],
+  "assistant": [
+   {
+    "s": "bookcase@90",
+    "at": [
+     0.7,
+     1.8
+    ]
+   },
+   {
+    "s": "trunk@0",
+    "at": [
+     7.0,
+     0.9
+    ]
+   },
+   {
+    "s": "armchair@0",
+    "at": [
+     3.6,
+     5.6
+    ]
+   },
+   {
+    "s": "shelves@0",
+    "at": [
+     5.6,
+     0.1
+    ],
+    "z": 6,
+    "solid": false
+   },
+   {
+    "s": "candle@0",
+    "at": [
+     6.9,
+     0.9
+    ],
+    "z": 22,
+    "solid": false,
+    "bias": 0.3
+   }
+  ],
+  "gm": [
+   {
+    "s": "bookcase@90",
+    "at": [
+     0.7,
+     1.8
+    ]
+   },
+   {
+    "s": "armchair@0",
+    "at": [
+     3.0,
+     5.6
+    ]
+   },
+   {
+    "s": "armchair@0",
+    "at": [
+     4.5,
+     5.6
+    ]
+   },
+   {
+    "s": "chest@0",
+    "at": [
+     7.0,
+     1.0
+    ]
+   },
+   {
+    "s": "banner-green@90",
+    "at": [
+     0.3,
+     5.0
+    ],
+    "z": 10,
+    "solid": false
+   }
+  ],
+  "department": [
+   {
+    "s": "banner-{house}@90",
+    "at": [
+     0.3,
+     4.0
+    ],
+    "z": 10,
+    "solid": false
+   },
+   {
+    "s": "torch@0",
+    "at": [
+     0.2,
+     6.6
+    ],
+    "z": 40,
+    "solid": false
+   }
+  ],
+  "break": [
+   {
+    "s": "keg@0",
+    "at": [
+     1.6,
+     0.8
+    ]
+   },
+   {
+    "s": "barrel@0",
+    "at": [
+     3.6,
+     0.8
+    ]
+   },
+   {
+    "s": "rug@0",
+    "at": [
+     3.4,
+     5.2
+    ],
+    "flat": true
+   },
+   {
+    "s": "sofa@0",
+    "at": [
+     2.4,
+     3.75
+    ]
+   },
+   {
+    "s": "table-small@0",
+    "at": [
+     3.6,
+     5.0
+    ]
+   },
+   {
+    "s": "armchair@0",
+    "at": [
+     5.4,
+     4.55
+    ],
+    "solid": false,
+    "bias": -0.05
+   },
+   {
+    "s": "armchair@0",
+    "at": [
+     3.2,
+     6.35
+    ],
+    "solid": false,
+    "bias": -0.05
+   },
+   {
+    "s": "banner-red@90",
+    "at": [
+     0.3,
+     5.5
+    ],
+    "z": 10,
+    "solid": false
+   },
+   {
+    "s": "torch@0",
+    "at": [
+     0.2,
+     3.0
+    ],
+    "z": 40,
+    "solid": false
+   }
+  ],
+  "library": [
+   {
+    "s": "bookcase@0",
+    "at": [
+     2.9,
+     1.45
+    ]
+   },
+   {
+    "s": "bookcase@0",
+    "at": [
+     5.1,
+     1.45
+    ]
+   },
+   {
+    "s": "bookcase@0",
+    "at": [
+     2.9,
+     3.45
+    ]
+   },
+   {
+    "s": "bookcase@0",
+    "at": [
+     5.1,
+     3.45
+    ]
+   },
+   {
+    "s": "bookcase@0",
+    "at": [
+     2.9,
+     5.45
+    ]
+   },
+   {
+    "s": "bookcase@0",
+    "at": [
+     5.1,
+     5.45
+    ]
+   },
+   {
+    "s": "bookcase@90",
+    "at": [
+     0.7,
+     1.8
+    ]
+   },
+   {
+    "s": "armchair@0",
+    "at": [
+     3.05,
+     7.1
+    ],
+    "solid": false,
+    "bias": -0.05
+   },
+   {
+    "s": "armchair@0",
+    "at": [
+     6.05,
+     7.1
+    ],
+    "solid": false,
+    "bias": -0.05
+   },
+   {
+    "s": "candle@0",
+    "at": [
+     7.2,
+     0.6
+    ],
+    "z": 0,
+    "solid": false
+   }
+  ],
+  "game": [
+   {
+    "s": "table-medium@0",
+    "at": [
+     2.9,
+     2.5
+    ]
+   },
+   {
+    "s": "stool@0",
+    "at": [
+     1.8,
+     5.6
+    ],
+    "solid": false,
+    "bias": -0.05
+   },
+   {
+    "s": "stool@0",
+    "at": [
+     2.0,
+     6.9
+    ],
+    "solid": false,
+    "bias": -0.05
+   },
+   {
+    "s": "sword@0",
+    "at": [
+     0.15,
+     6.0
+    ],
+    "z": 36,
+    "solid": false
+   },
+   {
+    "s": "barrel@0",
+    "at": [
+     5.6,
+     5.4
+    ]
+   }
+  ],
+  "playground": [
+   {
+    "s": "hoop",
+    "at": [
+     6.9,
+     1.0
+    ],
+    "shape": "hoop",
+    "solid": false,
+    "color": "#e9c46a"
+   },
+   {
+    "s": "hoop",
+    "at": [
+     6.9,
+     2.4
+    ],
+    "shape": "hoop",
+    "solid": false,
+    "color": "#e9c46a"
+   },
+   {
+    "s": "hoop",
+    "at": [
+     1.0,
+     6.9
+    ],
+    "shape": "hoop",
+    "solid": false,
+    "color": "#e9c46a"
+   },
+   {
+    "s": "flag-pennant@0",
+    "at": [
+     0.6,
+     0.6
+    ],
+    "solid": false
+   },
+   {
+    "s": "broom",
+    "at": [
+     2.5,
+     3.0
+    ],
+    "shape": "broom",
+    "solid": false
+   },
+   {
+    "s": "broom",
+    "at": [
+     5.0,
+     4.2
+    ],
+    "shape": "broom",
+    "solid": false
+   },
+   {
+    "s": "broom",
+    "at": [
+     3.6,
+     6.0
+    ],
+    "shape": "broom",
+    "solid": false
+   }
+  ],
+  "wellness": [
+   {
+    "s": "bed@0",
+    "at": [
+     1.4,
+     1.2
+    ]
+   },
+   {
+    "s": "bed@0",
+    "at": [
+     3.8,
+     1.2
+    ]
+   },
+   {
+    "s": "table-small@0",
+    "at": [
+     1.4,
+     4.35
+    ]
+   },
+   {
+    "s": "table-small@0",
+    "at": [
+     1.4,
+     6.55
+    ]
+   },
+   {
+    "s": "armchair@0",
+    "at": [
+     5.85,
+     1.55
+    ],
+    "solid": false,
+    "bias": -0.05
+   },
+   {
+    "s": "shelves@0",
+    "at": [
+     6.8,
+     0.1
+    ],
+    "z": 6,
+    "solid": false
+   },
+   {
+    "s": "cauldron",
+    "at": [
+     6.6,
+     3.4
+    ],
+    "shape": "cauldron",
+    "size": [
+     1.0,
+     1.0
+    ]
+   }
+  ],
+  "meeting": [
+   {
+    "s": "long-table@90",
+    "at": [
+     4.0,
+     3.8
+    ]
+   },
+   {
+    "s": "chair@0",
+    "at": [
+     2.65,
+     2.2
+    ],
+    "solid": false,
+    "bias": -0.05
+   },
+   {
+    "s": "chair@0",
+    "at": [
+     3.85,
+     2.2
+    ],
+    "solid": false,
+    "bias": -0.05
+   },
+   {
+    "s": "chair@0",
+    "at": [
+     5.05,
+     2.2
+    ],
+    "solid": false,
+    "bias": -0.05
+   },
+   {
+    "s": "banner-red@90",
+    "at": [
+     0.3,
+     2.4
+    ],
+    "z": 10,
+    "solid": false
+   },
+   {
+    "s": "banner-blue@90",
+    "at": [
+     0.3,
+     5.6
+    ],
+    "z": 10,
+    "solid": false
+   },
+   {
+    "s": "book",
+    "at": [
+     4.0,
+     3.8
+    ],
+    "shape": "book",
+    "solid": false,
+    "z": 78
+   }
+  ],
+  "courtyard": [
+   {
+    "s": "tree@0",
+    "at": [
+     4.0,
+     3.5
+    ]
+   },
+   {
+    "s": "rocks-small@0",
+    "at": [
+     1.5,
+     6.5
+    ]
+   },
+   {
+    "s": "rocks-small@0",
+    "at": [
+     6.5,
+     6.5
+    ]
+   }
+  ]
+ },
+ "spots": {
+  "break": [
+   {
+    "at": [
+     1.5,
+     2.2
+    ],
+    "pose": "stand",
+    "label": ""
+   },
+   {
+    "at": [
+     5.5,
+     2.2
+    ],
+    "pose": "stand",
+    "label": ""
+   },
+   {
+    "at": [
+     6.6,
+     6.4
+    ],
+    "pose": "stand",
+    "label": ""
+   },
+   {
+    "at": [
+     1.9,
+     4.0
+    ],
+    "pose": "lounge",
+    "label": "在交誼廳沙發上休息",
+    "key": "sofa1",
+    "use": "both",
+    "bias": 0.6
+   },
+   {
+    "at": [
+     2.9,
+     4.0
+    ],
+    "pose": "lounge",
+    "label": "在交誼廳沙發上休息",
+    "key": "sofa2",
+    "use": "both",
+    "bias": 0.6
+   },
+   {
+    "at": [
+     5.4,
+     4.6
+    ],
+    "pose": "lounge",
+    "label": "在扶手椅上看書",
+    "key": "seat1",
+    "use": "both",
+    "bias": 0.3
+   },
+   {
+    "at": [
+     3.2,
+     6.4
+    ],
+    "pose": "lounge",
+    "label": "在扶手椅上看書",
+    "key": "seat2",
+    "use": "both",
+    "bias": 0.3
+   }
+  ],
+  "library": [
+   {
+    "at": [
+     4.0,
+     2.5
+    ],
+    "pose": "stand",
+    "label": "在翻找古老的書"
+   },
+   {
+    "at": [
+     4.0,
+     4.5
+    ],
+    "pose": "stand",
+    "label": "在翻找古老的書"
+   },
+   {
+    "at": [
+     7.1,
+     3.2
+    ],
+    "pose": "stand",
+    "label": ""
+   },
+   {
+    "at": [
+     3.05,
+     7.1
+    ],
+    "pose": "lounge",
+    "label": "在圖書館讀魔法書",
+    "key": "chair1",
+    "use": "both",
+    "bias": 0.5
+   },
+   {
+    "at": [
+     6.05,
+     7.1
+    ],
+    "pose": "lounge",
+    "label": "在圖書館讀魔法書",
+    "key": "chair2",
+    "use": "both",
+    "bias": 0.5
+   }
+  ],
+  "game": [
+   {
+    "at": [
+     3.2,
+     4.5
+    ],
+    "pose": "stand",
+    "label": ""
+   },
+   {
+    "at": [
+     4.7,
+     2.5
+    ],
+    "pose": "stand",
+    "label": "在練習決鬥咒語"
+   },
+   {
+    "at": [
+     6.8,
+     2.0
+    ],
+    "pose": "stand",
+    "label": ""
+   },
+   {
+    "at": [
+     4.2,
+     7.2
+    ],
+    "pose": "stand",
+    "label": ""
+   },
+   {
+    "at": [
+     1.8,
+     5.6
+    ],
+    "pose": "lounge",
+    "label": "在決鬥社休息",
+    "key": "gseat1",
+    "use": "both",
+    "bias": 0.3
+   },
+   {
+    "at": [
+     2.0,
+     6.9
+    ],
+    "pose": "lounge",
+    "label": "在決鬥社休息",
+    "key": "gseat2",
+    "use": "both",
+    "bias": 0.3
+   }
+  ],
+  "playground": [
+   {
+    "at": [
+     2.5,
+     3.0
+    ],
+    "pose": "ride",
+    "label": "在練習飛天掃帚",
+    "key": "broom1",
+    "z": 26
+   },
+   {
+    "at": [
+     5.0,
+     4.2
+    ],
+    "pose": "ride",
+    "label": "在練習飛天掃帚",
+    "key": "broom2",
+    "z": 34
+   },
+   {
+    "at": [
+     3.6,
+     6.0
+    ],
+    "pose": "ride",
+    "label": "在練習飛天掃帚",
+    "key": "broom3",
+    "z": 20
+   },
+   {
+    "at": [
+     6.6,
+     6.8
+    ],
+    "pose": "stand",
+    "label": "在看隊友練飛行"
+   }
+  ],
+  "wellness": [
+   {
+    "at": [
+     1.4,
+     1.3
+    ],
+    "pose": "sleep",
+    "label": "在醫護翼休息",
+    "key": "bed1",
+    "use": "nap",
+    "z": 10,
+    "bias": 0.1
+   },
+   {
+    "at": [
+     3.8,
+     1.3
+    ],
+    "pose": "sleep",
+    "label": "在醫護翼休息",
+    "key": "bed2",
+    "use": "nap",
+    "z": 10,
+    "bias": 0.1
+   },
+   {
+    "at": [
+     1.4,
+     3.7
+    ],
+    "pose": "stand",
+    "label": "在調配魔藥",
+    "key": "desk1",
+    "use": "work"
+   },
+   {
+    "at": [
+     1.4,
+     5.9
+    ],
+    "pose": "stand",
+    "label": "在調配魔藥",
+    "key": "desk2",
+    "use": "work"
+   },
+   {
+    "at": [
+     5.85,
+     1.75
+    ],
+    "pose": "lounge",
+    "label": "在扶手椅上休息",
+    "key": "massage",
+    "bias": 0.5
+   },
+   {
+    "at": [
+     4.1,
+     5.3
+    ],
+    "pose": "stretch",
+    "label": "在練習咒語",
+    "key": "yoga1"
+   },
+   {
+    "at": [
+     5.9,
+     5.3
+    ],
+    "pose": "stretch",
+    "label": "在練習咒語",
+    "key": "yoga2"
+   }
+  ],
+  "courtyard": [
+   {
+    "at": [
+     1.5,
+     6.0
+    ],
+    "pose": "stand",
+    "label": "在中庭散步"
+   },
+   {
+    "at": [
+     6.5,
+     6.2
+    ],
+    "pose": "stand",
+    "label": "在中庭聊天"
+   },
+   {
+    "at": [
+     2.5,
+     2.5
+    ],
+    "pose": "stand",
+    "label": ""
+   }
+  ]
+ },
+ "outdoor": {
+  "trees": [
+   "tree@0",
+   "tree-small@0",
+   "tree@90"
+  ],
+  "pond": {
+   "rim": "#7d7468",
+   "water": "#2b4a6b",
+   "inner": "#3d6a8f",
+   "label": "黑湖"
+  },
+  "hammock": {
+   "s": "bench@0",
+   "label": "在湖邊長椅上休息"
+  },
+  "picnic": {
+   "s": "table-small@0",
+   "label": "戶外讀書桌"
+  },
+  "items": [
+   {
+    "s": "tower-base@0",
+    "at": [
+     0,
+     0
+    ],
+    "edge": "back",
+    "t": 0.05,
+    "d": 4.5,
+    "stack": [
+     "tower-mid@0",
+     "tower-roof@0"
+    ]
+   },
+   {
+    "s": "tower-base@0",
+    "at": [
+     0,
+     0
+    ],
+    "edge": "back",
+    "t": 0.95,
+    "d": 4.5,
+    "stack": [
+     "tower-mid@0",
+     "tower-roof@0"
+    ]
+   },
+   {
+    "s": "tower-square@0",
+    "at": [
+     0,
+     0
+    ],
+    "edge": "left",
+    "t": 0.5,
+    "d": 4.5
+   },
+   {
+    "s": "flag@0",
+    "at": [
+     0,
+     0
+    ],
+    "edge": "back",
+    "t": 0.3,
+    "d": 3
+   },
+   {
+    "s": "flag@0",
+    "at": [
+     0,
+     0
+    ],
+    "edge": "back",
+    "t": 0.7,
+    "d": 3
+   },
+   {
+    "s": "rocks@0",
+    "at": [
+     0,
+     0
+    ],
+    "edge": "right",
+    "t": 0.1,
+    "d": 5.5
+   },
+   {
+    "s": "rocks-small@0",
+    "at": [
+     0,
+     0
+    ],
+    "edge": "front",
+    "t": 0.92,
+    "d": 6.2
+   }
+  ]
+ },
+ "ambient": {
+  "candles": [
+   "meeting",
+   "department",
+   "break"
+  ],
+  "owls": 3
+ }
+}
